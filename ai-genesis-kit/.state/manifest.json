@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.2",
+  "adapters": [
+    "codex"
+  ],
+  "managedFiles": {
+    ".agents/skills/adopt/SKILL.md": "f74d1892be7e4e969236817f27344e1f72a270183007f0a072ff5a1497e0b832",
+    ".agents/skills/audit/SKILL.md": "94d9b024b7815f223e8d23f48cc6a03b443b47e54a404be032f891ddc7753467",
+    ".agents/skills/autopilot/SKILL.md": "b98b75a26f64570fb9363e7a7c189880e945b14daf2574b664d26114c4bd6664",
+    ".agents/skills/brief/SKILL.md": "e5dea558383cdb28eba41289c8f727270f420110484549d6a09534c20043d236",
+    ".agents/skills/check/SKILL.md": "d3cee29234a57ca85760b764a46e920700cf7d46ead52747fd443071ded64a7b",
+    ".agents/skills/ci/SKILL.md": "7c6982a2277ed99bd391da91cf771e37f80ee91016d11f88b19182c7f1cc9dec",
+    ".agents/skills/complete/SKILL.md": "9644c1b38ca4fc6f3ef04c460b4d976d5b1bc1198c06dc0969e6e91b7924cd2b",
+    ".agents/skills/debug/SKILL.md": "0dbc3a78a6eb2c528e9f9957e4f7d96b3623c969a49956069aa7f7319f7fcbaa",
+    ".agents/skills/doctor/SKILL.md": "ad99e42dec1563fee9f0587fcfe37e2b3be436fe56d614fd0bc54ccfb906ebce",
+    ".agents/skills/feature/SKILL.md": "36549711356bdb70e07736be0f3f84fec22fb9ff221e63711bd59ddb87266a9f",
+    ".agents/skills/fix/SKILL.md": "7aa4fcb4e34187c25e847c7af2f95f1588f29ca3ef6b5c5892ef42aa6abf6b7b",
+    ".agents/skills/implement/SKILL.md": "4925120c7500b4b6f108d15f88021f3d63968c4a12662979ed0f9123a8f4c5a1",
+    ".agents/skills/onboard/SKILL.md": "8116f17cdbf176738fdaa2c3c5f7dc1611cdbc8f237e2c5dd935b1e2c9a62a26",
+    ".agents/skills/overview/SKILL.md": "19eed6a7c87e88a8b8aaa72b1d28dbc092a06bd54a576b1731ce14bee0073878",
+    ".agents/skills/prototype/SKILL.md": "703037b86aae8ade7fff82196050ba7293e8b99811784fc18a29b867e132dbd2",
+    ".agents/skills/release/SKILL.md": "a66915c81c39f4416fb18d026c572982e12b1a13270921cafa08433efb3b6228",
+    ".agents/skills/rollback/SKILL.md": "31ed0dd461c2b12539a70333384f921025cf200f8b4c0b9e45cb70edb3e9d17f",
+    ".agents/skills/status/SKILL.md": "d27bcd39af5eef806aed0594d123cb52d29341e153e523f21a4950ab5b5acd2d",
+    ".agents/skills/tests/SKILL.md": "c4879b32b1fb64ec5e3e2399a179d8e709f9c85448e47a73208aab4c81bc173c",
+    ".agents/skills/try/SKILL.md": "93332d94ecce5308d4f3d39b786912f0d902618279f6e0992b21207f357bf253",
+    "ai-genesis-kit/README.md": "8781eb9663a959fd0f396a8759d730fea27867f16932618d12f16dbd495264d0"
+  }
+}
