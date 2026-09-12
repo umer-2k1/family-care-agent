@@ -1,5 +1,6 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireCareContext } from "@/server/auth/require-care-context";
+import { syncDoseStatusToCalendarSafely } from "@/server/services/google-calendar-dose-status";
 import { z } from "zod";
 
 const doseSchema = z.object({ status: z.enum(["taken", "missed", "skipped"]), notes: z.string().max(500).optional(), caregiverMemberId: z.string().uuid().nullable().optional() });
@@ -18,6 +19,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     }
     const { data, error } = await supabase.from("medication_doses").update({ status: input.data.status, taken_at: input.data.status === "taken" ? new Date().toISOString() : null, caregiver_user_id: context.userId, caregiver_member_id: input.data.caregiverMemberId ?? null, notes: input.data.notes ?? null }).eq("id", id).select("id,status,taken_at,caregiver_member_id").single();
     if (error) throw error;
+    await syncDoseStatusToCalendarSafely(id, input.data.status, context.userId, new URL(request.url).origin);
     return Response.json(data);
   } catch (error) { return Response.json({ error: error instanceof Error ? error.message : "Dose update failed." }, { status: 500 }); }
 }

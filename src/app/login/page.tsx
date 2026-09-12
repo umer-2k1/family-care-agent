@@ -1,6 +1,7 @@
 import { HeartPulse, ShieldCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
 export default function LoginPage() {
   const demoMode = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
@@ -15,7 +16,7 @@ export default function LoginPage() {
           <CardDescription className="mt-1 leading-6">Sign in to keep your family&apos;s health context private and connected.</CardDescription>
         </CardHeader>
         <CardContent className="px-8 sm:px-10">
-          <Button size="lg" className="mt-3 w-full rounded-xl py-6 font-semibold" render={<a href={demoMode ? "/" : "/api/auth/google"} />}>Continue with Google</Button>
+          <a href={demoMode ? "/" : "/api/auth/google"} className={cn(buttonVariants({ size: "lg" }), "mt-3 w-full rounded-xl py-6 font-semibold")}>Continue with Google</a>
           {demoMode && <p className="mt-4 flex items-center gap-2 text-xs leading-5 text-muted-foreground"><ShieldCheck size={15} /> Local demo mode is on. Google OAuth connects when Supabase is configured.</p>}
         </CardContent>
       </Card>

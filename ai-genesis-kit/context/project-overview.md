@@ -16,11 +16,11 @@ Family caregivers coordinate care for a child, parent, or partner. The primary d
 - LangGraph orchestrates one assistant. LLMs reason through a provider abstraction, selected by purpose with bounded fallback.
 - Cognee or Mem0 stores derived member-scoped episodic and semantic memory with Postgres provenance. It never replaces deterministic care state.
 - Deepgram with Groq Whisper fallback provides speech-to-text. Browser SpeechSynthesis is optional output.
-- Google Calendar receives only user-confirmed meaningful commitments, never individual medication doses.
+- Google Calendar receives only user-confirmed care plans. A confirmed Calendar action adds the follow-up and the full medication dose schedule with member and medication context.
 
 ## Product guardrails
 
-Human confirmation is required before any record-derived medication schedule, follow-up, calendar event, or family assignment becomes active. Record classifications with low confidence must ask for clarification. Care actions remain successful when optional memory or calendar work fails. Provider secrets remain server-only. The UI is calm and warm, using #7B9A8E, cream surfaces, rounded cards, subtle borders, and low visual noise.
+Human confirmation is required before record-derived actions unless the user has explicitly enabled automatic Calendar integration in Settings. That opt-in acts as standing consent only for complete medication courses at 90% or higher confidence; uncertain or incomplete records still require review. Care actions remain successful when optional memory or calendar work fails. Provider secrets remain server-only. The UI is calm and warm, using #7B9A8E, cream surfaces, rounded cards, subtle borders, and low visual noise.
 
 ## Current behavior
 

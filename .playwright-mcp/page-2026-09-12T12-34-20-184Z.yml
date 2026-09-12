@@ -1,0 +1,366 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - complementary [ref=f9e3]:
+      - generic [ref=f9e9]:
+        - paragraph [ref=f9e10]: Care Memory
+        - paragraph [ref=f9e11]: Family health, together
+      - navigation "Primary" [ref=f9e12]:
+        - link "Home" [ref=f9e13] [cursor=pointer]:
+          - /url: /
+        - link "Family" [ref=f9e17] [cursor=pointer]:
+          - /url: /family
+        - link "Care" [ref=f9e22] [cursor=pointer]:
+          - /url: /care
+        - link "Memory" [ref=f9e26] [cursor=pointer]:
+          - /url: /memory
+        - link "Ask" [ref=f9e39] [cursor=pointer]:
+          - /url: /ask
+        - link "Settings" [ref=f9e42] [cursor=pointer]:
+          - /url: /settings
+      - generic [ref=f9e46]:
+        - generic [ref=f9e47]:
+          - generic [ref=f9e48]: U
+          - generic [ref=f9e49]:
+            - paragraph [ref=f9e50]: Umer Memon
+            - paragraph [ref=f9e51]: umermemon4648@gmail.com
+        - button "Sign out" [ref=f9e55]
+    - generic [ref=f9e56]:
+      - banner [ref=f9e57]:
+        - paragraph [ref=f9e58]: Saturday, September 12
+        - generic [ref=f9e59]:
+          - link "Open care calendar" [ref=f9e60] [cursor=pointer]:
+            - /url: /care
+          - link "View care notifications" [ref=f9e63] [cursor=pointer]:
+            - /url: /
+      - main [ref=f9e68]:
+        - generic [ref=f9e69]:
+          - generic [ref=f9e70]:
+            - paragraph [ref=f9e71]: Care workspace
+            - heading "Active care plans" [level=1] [ref=f9e72]
+            - paragraph [ref=f9e73]: Each medication course is tracked independently for your family.
+          - generic [ref=f9e74]:
+            - generic [ref=f9e75]:
+              - generic [ref=f9e76]:
+                - paragraph [ref=f9e77]: Care workspace
+                - heading "John - Azithromycin treatment" [level=1] [ref=f9e78]
+                - paragraph [ref=f9e79]: Records require review before they create medication or follow-up actions.
+              - generic [ref=f9e80]:
+                - combobox "Family member" [ref=f9e81]:
+                  - generic [ref=f9e82]: John
+                  - img [aria-hidden]: ▼
+                - textbox [aria-hidden] [ref=f9e83]: 55c02537-15ea-4d23-9168-f519fac5e6a5
+                - generic [ref=f9e84] [cursor=pointer]:
+                  - generic [ref=f9e85]: Add health record
+                  - button "Add health record" [ref=f9e86]
+            - generic [ref=f9e87]:
+              - generic [ref=f9e88]:
+                - generic [ref=f9e94]:
+                  - heading "Azithromycin" [level=2] [ref=f9e95]
+                  - paragraph [ref=f9e96]: 4 ml · 1 times daily · After meals
+                - paragraph [ref=f9e97]:
+                  - strong [ref=f9e98]: 0 of 5 doses
+                  - text: recorded
+                - generic [ref=f9e99]:
+                  - paragraph [ref=f9e100]: Next dose
+                  - paragraph [ref=f9e101]:
+                    - time [ref=f9e102]: 12/09/2026, 13:00:00
+                  - combobox "Caregiver" [ref=f9e103]:
+                    - generic [ref=f9e104]: Recorded by me
+                    - img [aria-hidden]: ▼
+                  - textbox [aria-hidden] [ref=f9e105]
+                  - generic [ref=f9e106]:
+                    - button "Mark taken" [ref=f9e107]
+                    - button "Mark missed" [ref=f9e108]
+                    - button "Skip" [ref=f9e109]
+              - generic [ref=f9e110]:
+                - heading "Calendar" [level=2] [ref=f9e111]
+                - paragraph [ref=f9e112]:
+                  - text: "Follow-up: Pediatrician review ·"
+                  - time [ref=f9e113]: 26/09/2026
+                - paragraph [ref=f9e114]: Synchronizes 5 medication doses and 1 follow-up without leaving Care Memory.
+                - button "Add care plan to Google Calendar" [ref=f9e116]
+            - generic [ref=f9e117]:
+              - heading "Dose timeline" [level=2] [ref=f9e118]
+              - generic [ref=f9e119]:
+                - generic [ref=f9e120]:
+                  - time [ref=f9e121]: 12/09/2026, 13:00:00
+                  - generic [ref=f9e122]: scheduled
+                - generic [ref=f9e123]:
+                  - time [ref=f9e124]: 13/09/2026, 13:00:00
+                  - generic [ref=f9e125]: scheduled
+                - generic [ref=f9e126]:
+                  - time [ref=f9e127]: 14/09/2026, 13:00:00
+                  - generic [ref=f9e128]: scheduled
+                - generic [ref=f9e129]:
+                  - time [ref=f9e130]: 15/09/2026, 13:00:00
+                  - generic [ref=f9e131]: scheduled
+                - generic [ref=f9e132]:
+                  - time [ref=f9e133]: 16/09/2026, 13:00:00
+                  - generic [ref=f9e134]: scheduled
+          - generic [ref=f9e135]:
+            - generic [ref=f9e137]:
+              - paragraph [ref=f9e138]: Care workspace
+              - heading "John - Azithromycin treatment" [level=1] [ref=f9e139]
+              - paragraph [ref=f9e140]: Records require review before they create medication or follow-up actions.
+            - generic [ref=f9e141]:
+              - generic [ref=f9e142]:
+                - generic [ref=f9e148]:
+                  - heading "Azithromycin" [level=2] [ref=f9e149]
+                  - paragraph [ref=f9e150]: 4 ml · 1 times daily · After meals
+                - paragraph [ref=f9e151]:
+                  - strong [ref=f9e152]: 0 of 5 doses
+                  - text: recorded
+                - generic [ref=f9e153]:
+                  - paragraph [ref=f9e154]: Next dose
+                  - paragraph [ref=f9e155]:
+                    - time [ref=f9e156]: 12/09/2026, 13:00:00
+                  - combobox "Caregiver" [ref=f9e157]:
+                    - generic [ref=f9e158]: Recorded by me
+                    - img [aria-hidden]: ▼
+                  - textbox [aria-hidden] [ref=f9e159]
+                  - generic [ref=f9e160]:
+                    - button "Mark taken" [ref=f9e161]
+                    - button "Mark missed" [ref=f9e162]
+                    - button "Skip" [ref=f9e163]
+              - generic [ref=f9e164]:
+                - heading "Calendar" [level=2] [ref=f9e165]
+                - paragraph [ref=f9e166]:
+                  - text: "Follow-up: Pediatrician review ·"
+                  - time [ref=f9e167]: 26/09/2026
+                - paragraph [ref=f9e168]: Synchronizes 5 medication doses and 1 follow-up without leaving Care Memory.
+                - generic [ref=f9e169]:
+                  - button "Calendar synchronized" [ref=f9e170]
+                  - paragraph [ref=f9e171]: 5 dose events and 1 follow-up are synchronized.
+            - generic [ref=f9e172]:
+              - heading "Dose timeline" [level=2] [ref=f9e173]
+              - generic [ref=f9e174]:
+                - generic [ref=f9e175]:
+                  - time [ref=f9e176]: 12/09/2026, 13:00:00
+                  - generic [ref=f9e177]: scheduled
+                - generic [ref=f9e178]:
+                  - time [ref=f9e179]: 13/09/2026, 13:00:00
+                  - generic [ref=f9e180]: scheduled
+                - generic [ref=f9e181]:
+                  - time [ref=f9e182]: 14/09/2026, 13:00:00
+                  - generic [ref=f9e183]: scheduled
+                - generic [ref=f9e184]:
+                  - time [ref=f9e185]: 15/09/2026, 13:00:00
+                  - generic [ref=f9e186]: scheduled
+                - generic [ref=f9e187]:
+                  - time [ref=f9e188]: 16/09/2026, 13:00:00
+                  - generic [ref=f9e189]: scheduled
+          - generic [ref=f9e190]:
+            - generic [ref=f9e192]:
+              - paragraph [ref=f9e193]: Care workspace
+              - heading "John - Cetirizine treatment" [level=1] [ref=f9e194]
+              - paragraph [ref=f9e195]: Records require review before they create medication or follow-up actions.
+            - generic [ref=f9e196]:
+              - generic [ref=f9e197]:
+                - generic [ref=f9e203]:
+                  - heading "Cetirizine" [level=2] [ref=f9e204]
+                  - paragraph [ref=f9e205]: 5 ml · 1 times daily · At bedtime
+                - paragraph [ref=f9e206]:
+                  - strong [ref=f9e207]: 0 of 10 doses
+                  - text: recorded
+                - generic [ref=f9e208]:
+                  - paragraph [ref=f9e209]: Next dose
+                  - paragraph [ref=f9e210]:
+                    - time [ref=f9e211]: 12/09/2026, 13:00:00
+                  - combobox "Caregiver" [ref=f9e212]:
+                    - generic [ref=f9e213]: Recorded by me
+                    - img [aria-hidden]: ▼
+                  - textbox [aria-hidden] [ref=f9e214]
+                  - generic [ref=f9e215]:
+                    - button "Mark taken" [ref=f9e216]
+                    - button "Mark missed" [ref=f9e217]
+                    - button "Skip" [ref=f9e218]
+              - generic [ref=f9e219]:
+                - heading "Calendar" [level=2] [ref=f9e220]
+                - paragraph [ref=f9e221]:
+                  - text: "Follow-up: Review ·"
+                  - time [ref=f9e222]: 26/09/2026
+                - paragraph [ref=f9e223]: Synchronizes 10 medication doses and 1 follow-up without leaving Care Memory.
+                - generic [ref=f9e224]:
+                  - button "Calendar synchronized" [ref=f9e225]
+                  - paragraph [ref=f9e226]: 10 dose events and 1 follow-up are synchronized.
+            - generic [ref=f9e227]:
+              - heading "Dose timeline" [level=2] [ref=f9e228]
+              - generic [ref=f9e229]:
+                - generic [ref=f9e230]:
+                  - time [ref=f9e231]: 12/09/2026, 13:00:00
+                  - generic [ref=f9e232]: scheduled
+                - generic [ref=f9e233]:
+                  - time [ref=f9e234]: 13/09/2026, 13:00:00
+                  - generic [ref=f9e235]: scheduled
+                - generic [ref=f9e236]:
+                  - time [ref=f9e237]: 14/09/2026, 13:00:00
+                  - generic [ref=f9e238]: scheduled
+                - generic [ref=f9e239]:
+                  - time [ref=f9e240]: 15/09/2026, 13:00:00
+                  - generic [ref=f9e241]: scheduled
+                - generic [ref=f9e242]:
+                  - time [ref=f9e243]: 16/09/2026, 13:00:00
+                  - generic [ref=f9e244]: scheduled
+                - generic [ref=f9e245]:
+                  - time [ref=f9e246]: 17/09/2026, 13:00:00
+                  - generic [ref=f9e247]: scheduled
+                - generic [ref=f9e248]:
+                  - time [ref=f9e249]: 18/09/2026, 13:00:00
+                  - generic [ref=f9e250]: scheduled
+                - generic [ref=f9e251]:
+                  - time [ref=f9e252]: 19/09/2026, 13:00:00
+                  - generic [ref=f9e253]: scheduled
+                - generic [ref=f9e254]:
+                  - time [ref=f9e255]: 20/09/2026, 13:00:00
+                  - generic [ref=f9e256]: scheduled
+                - generic [ref=f9e257]:
+                  - time [ref=f9e258]: 21/09/2026, 13:00:00
+                  - generic [ref=f9e259]: scheduled
+          - generic [ref=f9e260]:
+            - generic [ref=f9e262]:
+              - paragraph [ref=f9e263]: Care workspace
+              - heading "John - Amoxicillin treatment" [level=1] [ref=f9e264]
+              - paragraph [ref=f9e265]: Records require review before they create medication or follow-up actions.
+            - generic [ref=f9e266]:
+              - generic [ref=f9e267]:
+                - generic [ref=f9e273]:
+                  - heading "Amoxicillin" [level=2] [ref=f9e274]
+                  - paragraph [ref=f9e275]: 5 ml · 2 times daily · After meals
+                - paragraph [ref=f9e276]:
+                  - strong [ref=f9e277]: 0 of 14 doses
+                  - text: recorded
+                - generic [ref=f9e278]:
+                  - paragraph [ref=f9e279]: Next dose
+                  - paragraph [ref=f9e280]:
+                    - time [ref=f9e281]: 12/09/2026, 13:00:00
+                  - combobox "Caregiver" [ref=f9e282]:
+                    - generic [ref=f9e283]: Recorded by me
+                    - img [aria-hidden]: ▼
+                  - textbox [aria-hidden] [ref=f9e284]
+                  - generic [ref=f9e285]:
+                    - button "Mark taken" [ref=f9e286]
+                    - button "Mark missed" [ref=f9e287]
+                    - button "Skip" [ref=f9e288]
+              - generic [ref=f9e289]:
+                - heading "Calendar" [level=2] [ref=f9e290]
+                - paragraph [ref=f9e291]:
+                  - text: "Follow-up: Pediatrician review ·"
+                  - time [ref=f9e292]: 26/09/2026
+                - paragraph [ref=f9e293]: Synchronizes 14 medication doses and 1 follow-up without leaving Care Memory.
+                - generic [ref=f9e294]:
+                  - button "Calendar synchronized" [ref=f9e295]
+                  - paragraph [ref=f9e296]: 14 dose events and 1 follow-up are synchronized.
+            - generic [ref=f9e297]:
+              - heading "Dose timeline" [level=2] [ref=f9e298]
+              - generic [ref=f9e299]:
+                - generic [ref=f9e300]:
+                  - time [ref=f9e301]: 12/09/2026, 13:00:00
+                  - generic [ref=f9e302]: scheduled
+                - generic [ref=f9e303]:
+                  - time [ref=f9e304]: 12/09/2026, 21:00:00
+                  - generic [ref=f9e305]: scheduled
+                - generic [ref=f9e306]:
+                  - time [ref=f9e307]: 13/09/2026, 13:00:00
+                  - generic [ref=f9e308]: scheduled
+                - generic [ref=f9e309]:
+                  - time [ref=f9e310]: 13/09/2026, 21:00:00
+                  - generic [ref=f9e311]: scheduled
+                - generic [ref=f9e312]:
+                  - time [ref=f9e313]: 14/09/2026, 13:00:00
+                  - generic [ref=f9e314]: scheduled
+                - generic [ref=f9e315]:
+                  - time [ref=f9e316]: 14/09/2026, 21:00:00
+                  - generic [ref=f9e317]: scheduled
+                - generic [ref=f9e318]:
+                  - time [ref=f9e319]: 15/09/2026, 13:00:00
+                  - generic [ref=f9e320]: scheduled
+                - generic [ref=f9e321]:
+                  - time [ref=f9e322]: 15/09/2026, 21:00:00
+                  - generic [ref=f9e323]: scheduled
+                - generic [ref=f9e324]:
+                  - time [ref=f9e325]: 16/09/2026, 13:00:00
+                  - generic [ref=f9e326]: scheduled
+                - generic [ref=f9e327]:
+                  - time [ref=f9e328]: 16/09/2026, 21:00:00
+                  - generic [ref=f9e329]: scheduled
+                - generic [ref=f9e330]:
+                  - time [ref=f9e331]: 17/09/2026, 13:00:00
+                  - generic [ref=f9e332]: scheduled
+                - generic [ref=f9e333]:
+                  - time [ref=f9e334]: 17/09/2026, 21:00:00
+                  - generic [ref=f9e335]: scheduled
+          - generic [ref=f9e336]:
+            - generic [ref=f9e338]:
+              - paragraph [ref=f9e339]: Care workspace
+              - heading "John - Amoxicillin treatment" [level=1] [ref=f9e340]
+              - paragraph [ref=f9e341]: Records require review before they create medication or follow-up actions.
+            - generic [ref=f9e342]:
+              - generic [ref=f9e343]:
+                - generic [ref=f9e349]:
+                  - heading "Amoxicillin" [level=2] [ref=f9e350]
+                  - paragraph [ref=f9e351]: 5 ml · 2 times daily · After meals
+                - paragraph [ref=f9e352]:
+                  - strong [ref=f9e353]: 2 of 30 doses
+                  - text: recorded
+                - generic [ref=f9e354]:
+                  - paragraph [ref=f9e355]: Next dose
+                  - paragraph [ref=f9e356]:
+                    - time [ref=f9e357]: 13/09/2026, 13:00:00
+                  - combobox "Caregiver" [ref=f9e358]:
+                    - generic [ref=f9e359]: Recorded by me
+                    - img [aria-hidden]: ▼
+                  - textbox [aria-hidden] [ref=f9e360]
+                  - generic [ref=f9e361]:
+                    - button "Mark taken" [ref=f9e362]
+                    - button "Mark missed" [ref=f9e363]
+                    - button "Skip" [ref=f9e364]
+              - generic [ref=f9e365]:
+                - heading "Calendar" [level=2] [ref=f9e366]
+                - paragraph [ref=f9e367]:
+                  - text: "Follow-up: Pediatrician review ·"
+                  - time [ref=f9e368]: 26/09/2026
+                - paragraph [ref=f9e369]: Synchronizes 30 medication doses and 1 follow-up without leaving Care Memory.
+                - generic [ref=f9e370]:
+                  - button "Calendar synchronized" [ref=f9e371]
+                  - paragraph [ref=f9e372]: 30 dose events and 1 follow-up are synchronized.
+            - generic [ref=f9e373]:
+              - heading "Dose timeline" [level=2] [ref=f9e374]
+              - generic [ref=f9e375]:
+                - generic [ref=f9e376]:
+                  - time [ref=f9e377]: 12/09/2026, 13:00:00
+                  - generic [ref=f9e378]: taken
+                - generic [ref=f9e379]:
+                  - time [ref=f9e380]: 12/09/2026, 21:00:00
+                  - generic [ref=f9e381]: taken · John
+                - generic [ref=f9e382]:
+                  - time [ref=f9e383]: 13/09/2026, 13:00:00
+                  - generic [ref=f9e384]: scheduled
+                - generic [ref=f9e385]:
+                  - time [ref=f9e386]: 13/09/2026, 21:00:00
+                  - generic [ref=f9e387]: scheduled
+                - generic [ref=f9e388]:
+                  - time [ref=f9e389]: 14/09/2026, 13:00:00
+                  - generic [ref=f9e390]: scheduled
+                - generic [ref=f9e391]:
+                  - time [ref=f9e392]: 14/09/2026, 21:00:00
+                  - generic [ref=f9e393]: scheduled
+                - generic [ref=f9e394]:
+                  - time [ref=f9e395]: 15/09/2026, 13:00:00
+                  - generic [ref=f9e396]: scheduled
+                - generic [ref=f9e397]:
+                  - time [ref=f9e398]: 15/09/2026, 21:00:00
+                  - generic [ref=f9e399]: scheduled
+                - generic [ref=f9e400]:
+                  - time [ref=f9e401]: 16/09/2026, 13:00:00
+                  - generic [ref=f9e402]: scheduled
+                - generic [ref=f9e403]:
+                  - time [ref=f9e404]: 16/09/2026, 21:00:00
+                  - generic [ref=f9e405]: scheduled
+                - generic [ref=f9e406]:
+                  - time [ref=f9e407]: 17/09/2026, 13:00:00
+                  - generic [ref=f9e408]: scheduled
+                - generic [ref=f9e409]:
+                  - time [ref=f9e410]: 17/09/2026, 21:00:00
+                  - generic [ref=f9e411]: scheduled
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f9e417] [cursor=pointer]

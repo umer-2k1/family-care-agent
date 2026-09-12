@@ -65,9 +65,9 @@ Diagnosis, emergency triage, medication interaction checking, clinical decision 
 
 - [ ] 10. Implement MediaRecorder voice input, Deepgram/Groq Whisper fallback, shared-agent submission, Google Calendar OAuth/event creation, and proactive follow-up checks.
 
-  **Done when:** A voice transcript executes the same assistant flow and a confirmed follow-up can create one linked Calendar event without blocking care state on failure.
+  **Done when:** A voice transcript executes the same assistant flow; a confirmed Calendar action can idempotently create the linked follow-up and complete medication dose schedule; and an explicit Settings opt-in can automatically confirm and synchronize complete high-confidence medication courses after upload without blocking care state on Calendar failure.
 
-  **Implementation state:** Browser recording and speech synthesis, Deepgram/Groq transcription fallback, shared LangGraph submission, encrypted Google tokens, idempotent Calendar event creation, and secret/session-authorized proactive checks are implemented. Browser permissions and live external APIs remain to be exercised.
+  **Implementation state:** Browser recording and speech synthesis, Deepgram/Groq transcription fallback, shared LangGraph submission, encrypted Google tokens, in-app idempotent follow-up and per-dose Calendar synchronization, persistent opt-in automation for complete high-confidence uploads, non-blocking Calendar status synchronization after dose updates, and secret/session-authorized proactive checks are implemented. Browser permissions and complete live external API behavior remain to be exercised.
 
 - [ ] 11. Replace remaining demo-only UI paths, add focused domain tests and browser evidence, close audit findings, and prepare the founder-demo review packet.
 

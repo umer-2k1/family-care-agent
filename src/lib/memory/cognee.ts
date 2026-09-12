@@ -9,13 +9,13 @@ export class CogneeMemoryProvider implements MemoryProvider {
   async addMemory(input: AddMemoryInput) {
     const datasetName = `family-member-${input.memberId}`;
     const form = new FormData();
-    form.append("raw_data", input.text);
+    form.append("data", new Blob([input.text], { type: "text/plain" }), `${input.sourceId || crypto.randomUUID()}.txt`);
     form.set("datasetName", datasetName);
     form.set("labels", JSON.stringify([input.category]));
     form.set("external_metadata", JSON.stringify([{ familyMemberId: input.memberId, episodeId: input.episodeId ?? null, sourceType: input.sourceType, sourceId: input.sourceId, createdAt: input.createdAt }]));
     const add = await fetch(`${this.baseUrl}/api/v1/add`, { method: "POST", headers: this.authHeaders(), body: form, signal: AbortSignal.timeout(30000) });
     if (!add.ok) throw new Error(`Cognee add failed with ${add.status}.`);
-    const cognify = await fetch(`${this.baseUrl}/api/v1/cognify`, { method: "POST", headers: this.jsonHeaders(), body: JSON.stringify({ datasets: [datasetName], run_in_background: false }), signal: AbortSignal.timeout(45000) });
+    const cognify = await fetch(`${this.baseUrl}/api/v1/cognify`, { method: "POST", headers: this.jsonHeaders(), body: JSON.stringify({ datasets: [datasetName], runInBackground: false }), signal: AbortSignal.timeout(45000) });
     if (!cognify.ok) throw new Error(`Cognee cognify failed with ${cognify.status}.`);
     return { ...input, id: crypto.randomUUID() };
   }

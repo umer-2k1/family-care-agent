@@ -44,8 +44,10 @@ describe("CogneeMemoryProvider.addMemory", () => {
     expect(fetchMock.mock.calls[0]?.[0]).toBe("https://cognee.example/api/v1/add");
     expect(addOptions.body).toBeInstanceOf(FormData);
     expect((addOptions.body as FormData).get("datasetName")).toBe("family-member-emma");
-    expect((addOptions.body as FormData).get("raw_data")).toBe("Emma developed a rash.");
+    const uploaded = (addOptions.body as FormData).get("data");
+    expect(uploaded).toBeInstanceOf(File);
+    await expect((uploaded as File).text()).resolves.toBe("Emma developed a rash.");
     expect(fetchMock.mock.calls[1]?.[0]).toBe("https://cognee.example/api/v1/cognify");
-    expect(JSON.parse(String((fetchMock.mock.calls[1]?.[1] as RequestInit).body))).toMatchObject({ datasets: ["family-member-emma"], run_in_background: false });
+    expect(JSON.parse(String((fetchMock.mock.calls[1]?.[1] as RequestInit).body))).toMatchObject({ datasets: ["family-member-emma"], runInBackground: false });
   });
 });

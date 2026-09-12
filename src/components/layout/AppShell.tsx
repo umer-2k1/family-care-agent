@@ -6,6 +6,7 @@ import {
   HeartPulse,
   Home,
   MessageCircleMore,
+  Settings,
   UsersRound,
 } from "lucide-react";
 import type { ReactNode } from "react";
@@ -31,6 +32,7 @@ const navigationItems: NavigationItem[] = [
   { label: "Care", icon: HeartPulse, href: "/care" },
   { label: "Memory", icon: BrainCircuit, href: "/memory" },
   { label: "Ask", icon: MessageCircleMore, href: "/ask" },
+  { label: "Settings", icon: Settings, href: "/settings" },
 ];
 
 async function getSidebarIdentity(demoMode: boolean) {
