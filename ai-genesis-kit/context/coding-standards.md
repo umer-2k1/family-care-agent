@@ -1,8 +1,6 @@
 # Coding Standards
 
-> Your conventions. Edit these once to match your stack. The defaults below
-> assume Next.js + TypeScript + Tailwind + Prisma; change or trim anything that
-> doesn't fit your project.
+> Project conventions for Next.js, TypeScript, Tailwind CSS, Supabase, and the Care Memory provider boundaries.
 >
 > Run `/onboard` after installing the AI Genesis Kit. It tunes this file to the real
 > project stack, along with `AGENTS.md`, `CLAUDE.md` when present,
@@ -64,17 +62,25 @@
 
 ## Database
 
-- Use Prisma ORM for all database operations
-- Always use `prisma migrate dev` for schema changes (not `db push`)
-- Run `prisma migrate status` before committing to verify migrations are in sync
-- Production deployments must run `prisma migrate deploy` before the app starts
+- Use Supabase Postgres as the source of truth for deterministic application state.
+- Apply schema changes through versioned Supabase migrations, never ad-hoc production edits.
+- Enforce Row Level Security and scope every user-owned query to the authenticated user and family workspace.
+- Keep raw health-record assets in Cloudinary and their metadata, ownership, and links in Postgres.
 
 ## Data Fetching
 
-- Server components fetch directly with Prisma
+- Server components fetch directly through server-only Supabase clients and repositories.
 - Client components use Server Actions
 - Validate all inputs with Zod
-- Scope every user-owned query by the authenticated Clerk user id (`clerkUserId`); never trust a client-supplied user id
+- Scope every user-owned query by the authenticated Supabase user id and family id; never trust a client-supplied id.
+
+## Provider boundaries
+
+- Select LLMs by purpose through the central model layer. Components and business services must not call Gemini, Groq, or OpenRouter directly.
+- Keep LangGraph as the single assistant orchestrator. Tools make deterministic state changes through services.
+- Depend on the memory-provider interface, never a Cognee or Mem0 response shape.
+- Memory and Calendar are enhancements: a successful Postgres care action must not fail because either provider is unavailable.
+- Never expose server credentials through `NEXT_PUBLIC_` variables.
 
 ## Error Handling
 

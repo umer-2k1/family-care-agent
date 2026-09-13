@@ -1,0 +1,30 @@
+import { AppShell } from "@/components/layout/AppShell";
+import { getFamilyMember } from "@/server/repositories/family-members";
+import { CalendarDays, FileText, Network, Pill } from "lucide-react";
+import { notFound } from "next/navigation";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import { updateFamilyMember } from "@/actions/family";
+import { getMemberProfileData } from "@/server/repositories/member-profile";
+import { listMemberMemories } from "@/server/repositories/memory";
+import { MemoryGraph } from "@/components/memory/MemoryGraph";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { getMemberMemoryGraph } from "@/server/services/member-memory-graph";
+
+export const dynamic = "force-dynamic";
+
+export default async function MemberPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const member = await getFamilyMember(id);
+  if (!member) notFound();
+  const [profile, memories, graph] = await Promise.all([getMemberProfileData(id), listMemberMemories(id), getMemberMemoryGraph(id)]);
+  const activeEpisode = profile.episodes.find((episode) => episode.status === "active");
+  const nextFollowUp = profile.episodes.flatMap((episode) => episode.followUps).find((followUp) => followUp.status === "pending");
+  return <AppShell activeItem="Family"><div className="space-y-8 pb-20 lg:pb-0"><div><Link className="text-sm font-semibold text-primary-dark" href="/family">← Family</Link><section className="mt-5 flex items-center gap-4"><div className="grid size-16 place-items-center rounded-full bg-primary-soft text-xl font-bold text-primary-dark">{member.name.slice(0, 1)}</div><div><p className="text-sm text-primary-dark">{member.relationship}</p><h1 className="text-3xl font-semibold tracking-tight">{member.name}</h1></div></section><div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4"><Stat icon={<Pill size={20}/>} label="Active care" value={activeEpisode?.title ?? "None"}/><Stat icon={<CalendarDays size={20}/>} label="Follow-up" value={nextFollowUp ? new Date(nextFollowUp.dueAt).toLocaleDateString() : "None"}/><Stat icon={<FileText size={20}/>} label="Records" value={String(profile.records.length)}/><Stat icon={<Network size={20}/>} label="Memories" value={String(memories.length)}/></div></div><section className="grid gap-6 xl:grid-cols-2"><Card className="rounded-3xl border-border p-6 shadow-card"><h2 className="text-lg font-semibold">Care overview</h2>{activeEpisode ? <div><p className="font-semibold">{activeEpisode.title}</p>{activeEpisode.medications.map((medication) => <p key={medication.id} className="mt-2 text-sm text-muted-foreground">{medication.name} · {medication.dose} {medication.unit} · {medication.frequencyPerDay} times daily for {medication.durationDays} days</p>)}</div> : <p className="text-sm text-muted-foreground">No active care episode.</p>}</Card><Card className="rounded-3xl border-border p-6 shadow-card"><h2 className="text-lg font-semibold">Timeline</h2><div className="space-y-4">{profile.events.map((event) => <div key={event.id} className="border-l-2 border-primary-light pl-4"><p className="font-medium">{event.title}</p><p className="text-sm text-muted-foreground">{event.description}</p><p className="mt-1 text-xs text-muted-foreground">{new Date(event.occurredAt).toLocaleString()} · {event.sourceType}</p></div>)}{profile.events.length === 0 && <p className="text-sm text-muted-foreground">No health events recorded.</p>}</div></Card></section><section><div className="mb-4 flex items-center justify-between gap-3"><h2 className="text-lg font-semibold">Memory graph</h2><span className="rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground">{graph.source === "cognee" ? "Cognee" : graph.source === "demo_seed" ? "Demo seed" : "Postgres fallback"}</span></div><MemoryGraph graph={graph}/></section><Card className="rounded-3xl border-border p-6 shadow-card"><h2 className="text-lg font-semibold">Health records</h2><div className="divide-y divide-border">{profile.records.map((record) => <div key={record.id} className="flex items-center justify-between py-3 text-sm"><span className="font-medium">{record.recordType.replaceAll("_", " ")}</span><span className="text-muted-foreground">{record.status} · {new Date(record.createdAt).toLocaleDateString()}</span></div>)}{profile.records.length === 0 && <p className="text-sm text-muted-foreground">No records uploaded.</p>}</div></Card><form action={updateFamilyMember} className="rounded-3xl border border-border bg-card p-6 shadow-card"><Input type="hidden" name="id" value={member.id}/><h2 className="text-lg font-semibold">Member details</h2><div className="mt-5 grid gap-4 sm:grid-cols-2"><div className="grid gap-2"><Label htmlFor="profile-name">Name</Label><Input id="profile-name" name="name" defaultValue={member.name} className="h-10 rounded-xl"/></div><div className="grid gap-2"><Label htmlFor="profile-relationship">Relationship</Label><Input id="profile-relationship" name="relationship" defaultValue={member.relationship} className="h-10 rounded-xl"/></div><div className="grid gap-2"><Label htmlFor="profile-dob">Date of birth</Label><Input id="profile-dob" name="dateOfBirth" type="date" defaultValue={member.date_of_birth ?? ""} className="h-10 rounded-xl"/></div><div className="grid gap-2 sm:col-span-2"><Label htmlFor="profile-notes">Notes</Label><Textarea id="profile-notes" name="notes" defaultValue={member.notes ?? ""} className="rounded-xl"/></div></div><Button size="lg" className="mt-5 rounded-xl">Save changes</Button></form></div></AppShell>;
+}
+
+function Stat({ icon, label, value }: { icon: ReactNode; label: string; value: string }) { return <Card className="rounded-2xl border-border p-5 shadow-card"><div className="text-primary-dark">{icon}</div><p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</p><p className="font-semibold">{value}</p></Card>; }
