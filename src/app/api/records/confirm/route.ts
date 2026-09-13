@@ -3,6 +3,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireCareContext } from "@/server/auth/require-care-context";
 import { z } from "zod";
 import { writeMemorySafely } from "@/server/services/memory";
+import { enqueueWhatsAppNotifications } from "@/server/services/whatsapp";
 
 const saveRecordSchema = z.object({ action: z.literal("record_only"), recordId: z.string(), memberId: z.string(), understanding: recordUnderstandingSchema });
 const createCarePlanSchema = z.object({ action: z.literal("create_care_plan"), recordId: z.string(), memberId: z.string(), episodeTitle: z.string().min(1).max(120), understanding: confirmedRecordUnderstandingSchema });
@@ -26,6 +27,8 @@ export async function POST(request: Request) {
     const followUp = confirmedFollowUpSchema.safeParse(input.data.understanding.followUps[0]);
     const { data, error } = await supabase.rpc("confirm_prescription_care_plan", { target_record_id: input.data.recordId, target_member_id: input.data.memberId, episode_title: input.data.episodeTitle, medication_input: medication, follow_up_input: followUp.success ? followUp.data : null });
     if (error) throw error;
+    const { data: whatsappConnection } = await supabase.from("whatsapp_connections").select("id").eq("user_id", context.userId).eq("status", "connected").maybeSingle();
+    if (whatsappConnection) await enqueueWhatsAppNotifications(whatsappConnection.id, context.familyId).catch((whatsappError) => console.warn("[whatsapp] Care plan created but notification enqueue failed", whatsappError));
     await writeMemorySafely({ memberId: input.data.memberId, episodeId: String(data), category: "semantic", text: `${medication.name} ${medication.dose} ${medication.unit}, ${medication.frequencyPerDay} times daily for ${medication.durationDays} days.`, sourceType: "record", sourceId: input.data.recordId, createdAt: new Date().toISOString() });
     return Response.json({ episodeId: data, doseCount: medication.frequencyPerDay * medication.durationDays, mode: "configured" });
   } catch (error) {
