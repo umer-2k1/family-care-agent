@@ -1,6 +1,6 @@
 # Care Memory
 
-Care Memory is a family health coordination application. It provides a user-confirmed path from record understanding to care episodes, medication tracking, family memory, follow-ups, Google Calendar events, voice input, and doctor summaries.
+Care Memory is an AI-powered family health assistant that turns records, voice notes, and caregiver updates into user-confirmed care plans. It tracks medications and follow-ups, sends WhatsApp prompts for overdue care, adds medication schedules to Google Calendar, and creates doctor-ready summaries - while keeping families in control.
 
 The interface uses Tailwind CSS with shadcn/ui primitives, retaining the Care Memory sage-and-cream design tokens.
 
