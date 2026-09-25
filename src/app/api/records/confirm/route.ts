@@ -27,10 +27,11 @@ export async function POST(request: Request) {
     const followUp = confirmedFollowUpSchema.safeParse(input.data.understanding.followUps[0]);
     const { data, error } = await supabase.rpc("confirm_prescription_care_plan", { target_record_id: input.data.recordId, target_member_id: input.data.memberId, episode_title: input.data.episodeTitle, medication_input: medication, follow_up_input: followUp.success ? followUp.data : null });
     if (error) throw error;
+    const { data: { user } } = await supabase.auth.getUser();
     const { data: whatsappConnection } = await supabase.from("whatsapp_connections").select("id").eq("user_id", context.userId).eq("status", "connected").maybeSingle();
     if (whatsappConnection) await enqueueWhatsAppNotifications(whatsappConnection.id, context.familyId).catch((whatsappError) => console.warn("[whatsapp] Care plan created but notification enqueue failed", whatsappError));
     await writeMemorySafely({ memberId: input.data.memberId, episodeId: String(data), category: "semantic", text: `${medication.name} ${medication.dose} ${medication.unit}, ${medication.frequencyPerDay} times daily for ${medication.durationDays} days.`, sourceType: "record", sourceId: input.data.recordId, createdAt: new Date().toISOString() });
-    return Response.json({ episodeId: data, doseCount: medication.frequencyPerDay * medication.durationDays, mode: "configured" });
+    return Response.json({ episodeId: data, autoCalendarEpisodeId: user?.user_metadata.calendar_auto_sync === true ? String(data) : undefined, doseCount: medication.frequencyPerDay * medication.durationDays, mode: "configured" });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : "Care-plan confirmation failed." }, { status: 500 });
   }

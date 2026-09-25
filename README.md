@@ -43,10 +43,13 @@ Production mode fails closed when Supabase configuration is absent. Application 
 ## External integrations
 
 - **Cloudinary:** configure `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`. Record images and PDFs are uploaded server-side as authenticated assets.
-- **Models:** configure the provider/model pairs in `.env.example` and the matching API keys. Record extraction uses `RECORD_LLM_*`; assistant generation uses `DEFAULT_LLM_*`; `FALLBACK_LLM_*` is attempted when the selected provider is unavailable. Supported providers are Gemini, Groq, and OpenRouter.
+- **Models:** configure the provider/model pairs in `.env.example` and the matching API keys. Record extraction uses `RECORD_LLM_*`; assistant generation uses `DEFAULT_LLM_*`; `FALLBACK_LLM_*` is attempted when the selected provider is unavailable. Supported providers are DeepSeek, Gemini, Groq, and OpenRouter. Use `DEEPSEEK_API_KEY` with `*_LLM_PROVIDER=deepseek`; select `deepseek-flash` for DeepSeek's current low-cost model with image understanding.
 - **Memory:** set `MEMORY_PROVIDER=cognee` with `COGNEE_API_URL` and `COGNEE_API_KEY`, or `MEMORY_PROVIDER=mem0` with `MEM0_API_URL` and `MEM0_API_KEY`. Cognee memories are ingested into one dataset per family member, cognified, and rendered from Cognee's real `/api/v1/datasets/{dataset_id}/graph` nodes and edges. Postgres retains provenance and is shown only as a labeled availability fallback when Cognee is unavailable or has not built the graph yet.
 - **Speech:** set `STT_PROVIDER=deepgram` and `DEEPGRAM_API_KEY`. A configured Groq key and `GROQ_WHISPER_MODEL` provide the transcription fallback.
 - **Google Calendar:** use the same Google OAuth client configured for Supabase. Include the application callback in Supabase's redirect allow list. The sign-in flow requests Calendar event access and stores encrypted provider tokens before creating idempotent, user-confirmed follow-up events.
 - **Proactive checks:** set a strong `CRON_SECRET` and call `GET /api/cron/proactive` with `Authorization: Bearer <secret>` from the scheduler. Signed-in users may also call this endpoint through their normal session; other requests are rejected by the application boundary.
 
 After configuration, start the app, sign in with Google, and check `/api/health` before exercising uploads, chat, voice, memory, Calendar, and scheduled checks.
+
+
+ 

@@ -65,13 +65,18 @@ export function CareWorkspace({ initialCare, members, showUploadControls = true 
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ action, recordId: review.id, memberId: selectedMemberId, episodeTitle: `${review.understanding.medications[0]?.name ?? "Care"} treatment`, understanding: review.understanding }),
     });
-    const body = await response.json() as { error?: string };
+    const body = await response.json() as { error?: string; autoCalendarEpisodeId?: string };
     if (!response.ok) {
       setSavingReviewAs(null);
       return setError(body.error ?? "Unable to save the reviewed record.");
     }
     if (review.preview) URL.revokeObjectURL(review.preview.url);
     setReview(null);
+    if (body.autoCalendarEpisodeId) {
+      const calendarResponse = await fetch("/api/calendar/google", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ episodeId: body.autoCalendarEpisodeId }) });
+      const calendarBody = await calendarResponse.json() as { error?: string };
+      if (!calendarResponse.ok) return setError(calendarBody.error ?? "The care plan was created, but Calendar synchronization failed.");
+    }
     window.location.reload();
   }
 

@@ -3,6 +3,7 @@ type Environment = Record<string, string | undefined>;
 function hasProviderKey(provider: string | undefined, env: Environment) {
   if ((provider ?? "gemini") === "gemini") return Boolean(env.GEMINI_API_KEY);
   if (provider === "groq") return Boolean(env.GROQ_API_KEY);
+  if (provider === "deepseek") return Boolean(env.DEEPSEEK_API_KEY);
   if (provider === "openrouter") return Boolean(env.OPENROUTER_API_KEY);
   return false;
 }

@@ -23,6 +23,14 @@ export async function requireCareContext(): Promise<CareContext> {
     .maybeSingle();
 
   if (familyError) throw new Error(`Unable to load family: ${familyError.message}`);
-  if (!family) throw new Error("No family workspace exists for this account.");
-  return { userId: user.id, familyId: family.id, isDemo: false };
+  if (family) return { userId: user.id, familyId: family.id, isDemo: false };
+
+  const { data: createdFamily, error: createError } = await supabase
+    .from("families")
+    .insert({ owner_user_id: user.id, name: "My Family" })
+    .select("id")
+    .single();
+
+  if (createError || !createdFamily) throw new Error(`Unable to create family workspace: ${createError?.message ?? "Unknown error"}`);
+  return { userId: user.id, familyId: createdFamily.id, isDemo: false };
 }

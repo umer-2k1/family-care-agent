@@ -1,4 +1,4 @@
-export type ModelProviderName = "gemini" | "groq" | "openrouter";
+export type ModelProviderName = "deepseek" | "gemini" | "groq" | "openrouter";
 export type ModelPurpose = "chat" | "record_understanding" | "reasoning" | "summary";
 export type ModelInput = { prompt: string; media?: { mimeType: string; data: string }; json?: boolean };
 
@@ -15,7 +15,7 @@ class GeminiProvider implements LanguageModelProvider {
     const key = requireValue(process.env.GEMINI_API_KEY, "GEMINI_API_KEY");
     const parts: Array<Record<string, unknown>> = [{ text: input.prompt }];
     if (input.media) parts.push({ inlineData: { mimeType: input.media.mimeType, data: input.media.data } });
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent?key=${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts }], generationConfig: input.json ? { responseMimeType: "application/json" } : undefined }), signal: AbortSignal.timeout(45000) });
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${this.model}:generateContent?key=${key}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts }], generationConfig: input.json ? { responseMimeType: "application/json" } : undefined }), signal: AbortSignal.timeout(60000) });
     if (!response.ok) throw new Error(`Gemini failed with ${response.status}.`);
     const payload = await response.json() as { candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };
     const text = payload.candidates?.[0]?.content?.parts?.map((part) => part.text ?? "").join("");
@@ -29,7 +29,7 @@ class OpenAiCompatibleProvider implements LanguageModelProvider {
   async complete(input: ModelInput) {
     const mediaPart = input.media?.mimeType === "application/pdf" ? { type: "file", file: { filename: "health-record.pdf", file_data: `data:${input.media.mimeType};base64,${input.media.data}` } } : input.media ? { type: "image_url", image_url: { url: `data:${input.media.mimeType};base64,${input.media.data}` } } : null;
     const content = mediaPart ? [{ type: "text", text: input.prompt }, mediaPart] : input.prompt;
-    const response = await fetch(`${this.baseUrl}/chat/completions`, { method: "POST", headers: { authorization: `Bearer ${requireValue(this.apiKey, `${this.label} API key`)}`, "content-type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content }], response_format: input.json ? { type: "json_object" } : undefined, temperature: 0.2 }), signal: AbortSignal.timeout(45000) });
+    const response = await fetch(`${this.baseUrl}/chat/completions`, { method: "POST", headers: { authorization: `Bearer ${requireValue(this.apiKey, `${this.label} API key`)}`, "content-type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content }], response_format: input.json ? { type: "json_object" } : undefined, temperature: 0.2 }), signal: AbortSignal.timeout(60000) });
     if (!response.ok) throw new Error(`${this.label} failed with ${response.status}.`);
     const payload = await response.json() as { choices?: Array<{ message?: { content?: string } }> };
     const text = payload.choices?.[0]?.message?.content;
@@ -41,6 +41,7 @@ class OpenAiCompatibleProvider implements LanguageModelProvider {
 function createProvider(name: ModelProviderName, model: string): LanguageModelProvider {
   if (name === "gemini") return new GeminiProvider(model);
   if (name === "groq") return new OpenAiCompatibleProvider("https://api.groq.com/openai/v1", process.env.GROQ_API_KEY, model, "Groq");
+  if (name === "deepseek") return new OpenAiCompatibleProvider("https://api.deepseek.com", process.env.DEEPSEEK_API_KEY, model, "DeepSeek");
   return new OpenAiCompatibleProvider("https://openrouter.ai/api/v1", process.env.OPENROUTER_API_KEY, model, "OpenRouter");
 }
 

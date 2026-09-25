@@ -2,8 +2,6 @@ import { deleteHealthRecordAsset, uploadHealthRecord } from "@/lib/cloudinary/se
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireCareContext } from "@/server/auth/require-care-context";
 import { understandHealthRecord } from "@/server/services/record-understanding";
-import { confirmedFollowUpSchema, confirmedRecordUnderstandingSchema } from "@/lib/ai/schemas/record-understanding";
-import { writeMemorySafely } from "@/server/services/memory";
 
 const allowedTypes = new Set(["image/jpeg", "image/png", "image/webp", "application/pdf"]);
 
@@ -38,18 +36,6 @@ export async function POST(request: Request) {
     }
     const { error: updateError } = await supabase.from("health_records").update({ record_type: understanding.recordType, status: "review", raw_ai_output_json: understanding }).eq("id", record.id);
     if (updateError) throw updateError;
-    const { data: { user } } = await supabase.auth.getUser();
-    const confirmed = confirmedRecordUnderstandingSchema.safeParse(understanding);
-    const shouldAutomate = user?.user_metadata.calendar_auto_sync === true && understanding.confidence >= 0.9 && !understanding.requiresUserClarification && confirmed.success;
-    if (shouldAutomate) {
-      const medication = confirmed.data.medications[0];
-      const followUp = confirmedFollowUpSchema.safeParse(confirmed.data.followUps[0]);
-      const { data: episodeId, error } = await supabase.rpc("confirm_prescription_care_plan", { target_record_id: record.id, target_member_id: memberId, episode_title: `${medication.name} treatment`, medication_input: medication, follow_up_input: followUp.success ? followUp.data : null });
-      if (error) throw error;
-      await writeMemorySafely({ memberId, episodeId: String(episodeId), category: "semantic", text: `${medication.name} ${medication.dose} ${medication.unit}, ${medication.frequencyPerDay} times daily for ${medication.durationDays} days.`, sourceType: "record", sourceId: record.id, createdAt: new Date().toISOString() });
-      console.info(`[records] Automatic care plan created recordId=${record.id} episodeId=${episodeId}`);
-      return Response.json({ id: record.id, understanding: confirmed.data, autoCalendarEpisodeId: String(episodeId), mode: "configured" }, { status: 201 });
-    }
     console.info("[records] Record is ready for user review", { recordId: record.id, recordType: understanding.recordType, medicationCount: understanding.medications.length });
     return Response.json({ id: record.id, understanding, mode: "configured" }, { status: 201 });
   } catch (error) {
