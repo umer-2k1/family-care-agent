@@ -1,0 +1,119 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - complementary [ref=f2e3]:
+      - generic [ref=f2e9]:
+        - paragraph [ref=f2e10]: Care Memory
+        - paragraph [ref=f2e11]: Family health, together
+      - navigation "Primary" [ref=f2e12]:
+        - link "Home" [ref=f2e13] [cursor=pointer]:
+          - /url: /
+        - link "Family" [ref=f2e17] [cursor=pointer]:
+          - /url: /family
+        - link "Care" [ref=f2e22] [cursor=pointer]:
+          - /url: /care
+        - link "Memory" [ref=f2e26] [cursor=pointer]:
+          - /url: /memory
+        - link "Ask" [ref=f2e39] [cursor=pointer]:
+          - /url: /ask
+        - link "Settings" [ref=f2e42] [cursor=pointer]:
+          - /url: /settings
+      - generic [ref=f2e46]:
+        - generic [ref=f2e47]:
+          - generic [ref=f2e48]: U
+          - generic [ref=f2e49]:
+            - paragraph [ref=f2e50]: Umer Memon
+            - paragraph [ref=f2e51]: umermemon4648@gmail.com
+        - button "Sign out" [ref=f2e55]
+    - generic [ref=f2e56]:
+      - banner [ref=f2e57]:
+        - paragraph [ref=f2e58]: Saturday, September 12
+        - generic [ref=f2e59]:
+          - link "Open care calendar" [ref=f2e60] [cursor=pointer]:
+            - /url: /care
+          - link "View care notifications" [ref=f2e63] [cursor=pointer]:
+            - /url: /
+      - main [ref=f2e68]:
+        - generic [ref=f2e69]:
+          - generic [ref=f2e70]:
+            - generic [ref=f2e71]:
+              - paragraph [ref=f2e72]: Care workspace
+              - heading "John - Amoxicillin treatment" [level=1] [ref=f2e73]
+              - paragraph [ref=f2e74]: Records require review before they create medication or follow-up actions.
+            - generic [ref=f2e75]:
+              - combobox "Family member" [ref=f2e76]:
+                - generic [ref=f2e77]: John
+                - img [aria-hidden]: ▼
+              - textbox [aria-hidden] [ref=f2e78]: 55c02537-15ea-4d23-9168-f519fac5e6a5
+              - generic [ref=f2e79] [cursor=pointer]:
+                - generic [ref=f2e80]: Add health record
+                - button "Add health record" [ref=f2e81]
+          - generic [ref=f2e82]:
+            - generic [ref=f2e83]:
+              - generic [ref=f2e89]:
+                - heading "Amoxicillin" [level=2] [ref=f2e90]
+                - paragraph [ref=f2e91]: 5 ml · 2 times daily · After meals
+              - paragraph [ref=f2e92]:
+                - strong [ref=f2e93]: 2 of 30 doses
+                - text: recorded
+              - generic [ref=f2e94]:
+                - paragraph [ref=f2e95]: Next dose
+                - paragraph [ref=f2e96]:
+                  - time [ref=f2e97]: 13/09/2026, 13:00:00
+                - combobox "Caregiver" [ref=f2e98]:
+                  - generic [ref=f2e99]: Recorded by me
+                  - img [aria-hidden]: ▼
+                - textbox [aria-hidden] [ref=f2e100]
+                - generic [ref=f2e101]:
+                  - button "Mark taken" [ref=f2e102]
+                  - button "Mark missed" [ref=f2e103]
+                  - button "Skip" [ref=f2e104]
+            - generic [ref=f2e105]:
+              - heading "Calendar" [level=2] [ref=f2e106]
+              - paragraph [ref=f2e107]:
+                - text: "Follow-up: Pediatrician review ·"
+                - time [ref=f2e108]: 26/09/2026
+              - paragraph [ref=f2e109]: Synchronizes 30 medication doses and 1 follow-up without leaving Care Memory.
+              - generic [ref=f2e110]:
+                - button "Calendar synchronized" [ref=f2e111]
+                - paragraph [ref=f2e112]: 30 dose events and 1 follow-up are synchronized.
+          - generic [ref=f2e113]:
+            - heading "Dose timeline" [level=2] [ref=f2e114]
+            - generic [ref=f2e115]:
+              - generic [ref=f2e116]:
+                - time [ref=f2e117]: 12/09/2026, 13:00:00
+                - generic [ref=f2e118]: taken
+              - generic [ref=f2e119]:
+                - time [ref=f2e120]: 12/09/2026, 21:00:00
+                - generic [ref=f2e121]: taken · John
+              - generic [ref=f2e122]:
+                - time [ref=f2e123]: 13/09/2026, 13:00:00
+                - generic [ref=f2e124]: scheduled
+              - generic [ref=f2e125]:
+                - time [ref=f2e126]: 13/09/2026, 21:00:00
+                - generic [ref=f2e127]: scheduled
+              - generic [ref=f2e128]:
+                - time [ref=f2e129]: 14/09/2026, 13:00:00
+                - generic [ref=f2e130]: scheduled
+              - generic [ref=f2e131]:
+                - time [ref=f2e132]: 14/09/2026, 21:00:00
+                - generic [ref=f2e133]: scheduled
+              - generic [ref=f2e134]:
+                - time [ref=f2e135]: 15/09/2026, 13:00:00
+                - generic [ref=f2e136]: scheduled
+              - generic [ref=f2e137]:
+                - time [ref=f2e138]: 15/09/2026, 21:00:00
+                - generic [ref=f2e139]: scheduled
+              - generic [ref=f2e140]:
+                - time [ref=f2e141]: 16/09/2026, 13:00:00
+                - generic [ref=f2e142]: scheduled
+              - generic [ref=f2e143]:
+                - time [ref=f2e144]: 16/09/2026, 21:00:00
+                - generic [ref=f2e145]: scheduled
+              - generic [ref=f2e146]:
+                - time [ref=f2e147]: 17/09/2026, 13:00:00
+                - generic [ref=f2e148]: scheduled
+              - generic [ref=f2e149]:
+                - time [ref=f2e150]: 17/09/2026, 21:00:00
+                - generic [ref=f2e151]: scheduled
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f2e157] [cursor=pointer]

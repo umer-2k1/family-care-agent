@@ -1,0 +1,255 @@
+- generic [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - complementary [ref=f11e3]:
+      - generic [ref=f11e9]:
+        - paragraph [ref=f11e10]: Care Memory
+        - paragraph [ref=f11e11]: Family health, together
+      - navigation "Primary" [ref=f11e12]:
+        - link "Home" [ref=f11e13] [cursor=pointer]:
+          - /url: /
+        - link "Family" [ref=f11e17] [cursor=pointer]:
+          - /url: /family
+        - link "Care" [ref=f11e22] [cursor=pointer]:
+          - /url: /care
+        - link "Memory" [ref=f11e26] [cursor=pointer]:
+          - /url: /memory
+        - link "Ask" [ref=f11e39] [cursor=pointer]:
+          - /url: /ask
+        - link "Settings" [ref=f11e42] [cursor=pointer]:
+          - /url: /settings
+      - generic [ref=f11e46]:
+        - generic [ref=f11e47]:
+          - generic [ref=f11e48]: U
+          - generic [ref=f11e49]:
+            - paragraph [ref=f11e50]: Umer Memon
+            - paragraph [ref=f11e51]: umermemon4648@gmail.com
+        - button "Sign out" [ref=f11e55]
+    - generic [ref=f11e56]:
+      - banner [ref=f11e57]:
+        - paragraph [ref=f11e58]: Saturday, September 12
+        - generic [ref=f11e59]:
+          - link "Open care calendar" [ref=f11e60] [cursor=pointer]:
+            - /url: /care
+          - link "View care notifications" [ref=f11e63] [cursor=pointer]:
+            - /url: /
+      - main [ref=f11e68]:
+        - generic [ref=f11e69]:
+          - paragraph [ref=f11e70]: John's long-term context
+          - heading "Memory graph" [level=1] [ref=f11e71]
+          - paragraph [ref=f11e72]: Browse stored memory provenance or switch to the Cognee knowledge graph for extracted entities and relationships.
+          - navigation "Choose family member" [ref=f11e73]:
+            - link "John" [ref=f11e74] [cursor=pointer]:
+              - /url: /memory?member=55c02537-15ea-4d23-9168-f519fac5e6a5
+          - generic [ref=f11e75]:
+            - generic [ref=f11e76]:
+              - generic [ref=f11e77]:
+                - heading "Knowledge graph" [level=2] [ref=f11e133]
+                - paragraph [ref=f11e79]: Entities and relationships extracted by Cognee.
+              - tablist "Graph type" [ref=f11e80]:
+                - tab "Memory graph" [ref=f11e81]
+                - tab "Knowledge graph" [active] [selected] [ref=f11e82]
+            - paragraph [ref=f11e83]: "Source: Cognee"
+            - application [ref=f11e85]:
+              - generic [ref=f11e87]:
+                - generic:
+                  - generic:
+                    - img:
+                      - group "Edge from 8cb71cc5-3571-5d9c-acdb-fc4adb4b902d to 270318a9-4f9c-57a3-adcb-9ef33d5bcf64" [ref=f11e134] [cursor=pointer]:
+                        - generic [ref=f11e137]: made_from
+                    - img:
+                      - group "Edge from 270318a9-4f9c-57a3-adcb-9ef33d5bcf64 to 6f6b9f61-2994-44db-99ba-00011eebd2e3" [ref=f11e139] [cursor=pointer]:
+                        - generic [ref=f11e140]: is_part_of
+                    - img:
+                      - group "Edge from 270318a9-4f9c-57a3-adcb-9ef33d5bcf64 to 5a4f8f67-e91e-5360-94eb-c9fee53c839b" [ref=f11e142] [cursor=pointer]:
+                        - generic [ref=f11e145]: contains
+                    - img:
+                      - group "Edge from 5a4f8f67-e91e-5360-94eb-c9fee53c839b to e99f6e8f-9ef5-52d8-aca2-e7228e0fc3e0" [ref=f11e147] [cursor=pointer]:
+                        - generic [ref=f11e150]: is_a
+                    - img:
+                      - group "Edge from 5a4f8f67-e91e-5360-94eb-c9fee53c839b to ec86b335-5a11-57e1-8441-6ddb0e82ea46" [ref=f11e152] [cursor=pointer]:
+                        - generic [ref=f11e155]: has_dosage_amount
+                    - img:
+                      - group "Edge from ec86b335-5a11-57e1-8441-6ddb0e82ea46 to ca78962e-9d02-5f5b-ad82-0987cb8ffb0c" [ref=f11e157] [cursor=pointer]:
+                        - generic [ref=f11e160]: is_a
+                    - img:
+                      - group "Edge from 5a4f8f67-e91e-5360-94eb-c9fee53c839b to 53f99862-b317-5337-85ba-07ca653124b5" [ref=f11e162] [cursor=pointer]:
+                        - generic [ref=f11e165]: has_frequency
+                    - img:
+                      - group "Edge from 5a4f8f67-e91e-5360-94eb-c9fee53c839b to a4ec1801-0ff0-5b4a-b713-967d1e3b0297" [ref=f11e167] [cursor=pointer]:
+                        - generic [ref=f11e168]: has_duration
+                    - img:
+                      - group "Edge from a4ec1801-0ff0-5b4a-b713-967d1e3b0297 to 48332387-4aec-5e6a-a549-a6b3d83ffb4b" [ref=f11e170] [cursor=pointer]:
+                        - generic [ref=f11e171]: is_a
+                    - img:
+                      - group "Edge from 270318a9-4f9c-57a3-adcb-9ef33d5bcf64 to ec86b335-5a11-57e1-8441-6ddb0e82ea46" [ref=f11e173] [cursor=pointer]:
+                        - generic [ref=f11e174]: contains
+                    - img:
+                      - group "Edge from 270318a9-4f9c-57a3-adcb-9ef33d5bcf64 to 53f99862-b317-5337-85ba-07ca653124b5" [ref=f11e176] [cursor=pointer]:
+                        - generic [ref=f11e177]: contains
+                    - img:
+                      - group "Edge from 270318a9-4f9c-57a3-adcb-9ef33d5bcf64 to a4ec1801-0ff0-5b4a-b713-967d1e3b0297" [ref=f11e179] [cursor=pointer]:
+                        - generic [ref=f11e182]: contains
+                    - img:
+                      - group "Edge from 11506f73-7862-507e-9f35-7a557c5439b7 to ed5dabf3-9415-512c-a879-a4c2baba4231" [ref=f11e184] [cursor=pointer]:
+                        - generic [ref=f11e187]: made_from
+                    - img:
+                      - group "Edge from ed5dabf3-9415-512c-a879-a4c2baba4231 to d442ed1a-3d7a-4073-9471-c637e053e74b" [ref=f11e189] [cursor=pointer]:
+                        - generic [ref=f11e192]: is_part_of
+                    - img:
+                      - group "Edge from ed5dabf3-9415-512c-a879-a4c2baba4231 to 13e173e6-75c1-52e3-a975-51bca41bdd89" [ref=f11e194] [cursor=pointer]:
+                        - generic [ref=f11e195]: contains
+                    - img:
+                      - group "Edge from 13e173e6-75c1-52e3-a975-51bca41bdd89 to 6f4f0ae5-130d-54b7-b3d9-217bef1c164f" [ref=f11e197] [cursor=pointer]:
+                        - generic [ref=f11e200]: is_a
+                    - img:
+                      - group "Edge from 13e173e6-75c1-52e3-a975-51bca41bdd89 to daef1474-e149-5804-bbd6-62bb0f4deddb" [ref=f11e202] [cursor=pointer]:
+                        - generic [ref=f11e203]: has_dosage
+                    - img:
+                      - group "Edge from daef1474-e149-5804-bbd6-62bb0f4deddb to d5ee3f01-4703-5cdf-b61e-8b2829cb7da5" [ref=f11e205] [cursor=pointer]:
+                        - generic [ref=f11e208]: is_a
+                    - img:
+                      - group "Edge from 13e173e6-75c1-52e3-a975-51bca41bdd89 to 53f99862-b317-5337-85ba-07ca653124b5" [ref=f11e210] [cursor=pointer]:
+                        - generic [ref=f11e213]: has_frequency
+                    - img:
+                      - group "Edge from 53f99862-b317-5337-85ba-07ca653124b5 to 2776a3b4-fe78-5988-8a59-4d53a3bfc1f1" [ref=f11e215] [cursor=pointer]:
+                        - generic [ref=f11e216]: is_a
+                    - img:
+                      - group "Edge from 13e173e6-75c1-52e3-a975-51bca41bdd89 to d2d8e0f4-9a2e-5db8-b90a-20bffcb52bc8" [ref=f11e218] [cursor=pointer]:
+                        - generic [ref=f11e219]: has_duration
+                    - img:
+                      - group "Edge from d2d8e0f4-9a2e-5db8-b90a-20bffcb52bc8 to 48332387-4aec-5e6a-a549-a6b3d83ffb4b" [ref=f11e221] [cursor=pointer]:
+                        - generic [ref=f11e222]: is_a
+                    - img:
+                      - group "Edge from ed5dabf3-9415-512c-a879-a4c2baba4231 to daef1474-e149-5804-bbd6-62bb0f4deddb" [ref=f11e224] [cursor=pointer]:
+                        - generic [ref=f11e225]: contains
+                    - img:
+                      - group "Edge from ed5dabf3-9415-512c-a879-a4c2baba4231 to 53f99862-b317-5337-85ba-07ca653124b5" [ref=f11e227] [cursor=pointer]:
+                        - generic [ref=f11e230]: contains
+                    - img:
+                      - group "Edge from ed5dabf3-9415-512c-a879-a4c2baba4231 to d2d8e0f4-9a2e-5db8-b90a-20bffcb52bc8" [ref=f11e232] [cursor=pointer]:
+                        - generic [ref=f11e233]: contains
+                    - img:
+                      - group "Edge from c0dcd421-a0be-56be-94e3-aeb54c30b4f3 to c85974ae-2f65-5764-aed5-a7d763964798" [ref=f11e235] [cursor=pointer]:
+                        - generic [ref=f11e238]: made_from
+                    - img:
+                      - group "Edge from c85974ae-2f65-5764-aed5-a7d763964798 to 35e4f12d-c1a5-44fe-9e44-f834e276033e" [ref=f11e240] [cursor=pointer]:
+                        - generic [ref=f11e243]: is_part_of
+                    - img:
+                      - group "Edge from c85974ae-2f65-5764-aed5-a7d763964798 to 5a96af8d-723d-5f40-adef-9020bdd0aa9e" [ref=f11e245] [cursor=pointer]:
+                        - generic [ref=f11e246]: contains
+                    - img:
+                      - group "Edge from 5a96af8d-723d-5f40-adef-9020bdd0aa9e to d0829646-fc8b-587c-94d0-7789b2a1ea7a" [ref=f11e248] [cursor=pointer]:
+                        - generic [ref=f11e249]: has_duration
+                    - img:
+                      - group "Edge from d0829646-fc8b-587c-94d0-7789b2a1ea7a to 48332387-4aec-5e6a-a549-a6b3d83ffb4b" [ref=f11e251] [cursor=pointer]:
+                        - generic [ref=f11e252]: is_a
+                    - img:
+                      - group "Edge from c85974ae-2f65-5764-aed5-a7d763964798 to ec86b335-5a11-57e1-8441-6ddb0e82ea46" [ref=f11e254] [cursor=pointer]:
+                        - generic [ref=f11e257]: contains
+                    - img:
+                      - group "Edge from c85974ae-2f65-5764-aed5-a7d763964798 to 74311ec9-c6d3-52f0-86ea-5c2a82f7af38" [ref=f11e259] [cursor=pointer]:
+                        - generic [ref=f11e262]: contains
+                    - img:
+                      - group "Edge from c85974ae-2f65-5764-aed5-a7d763964798 to d0829646-fc8b-587c-94d0-7789b2a1ea7a" [ref=f11e264] [cursor=pointer]:
+                        - generic [ref=f11e265]: contains
+                    - img:
+                      - group "Edge from 7428204d-4213-5a2d-9fc2-490ffc56bc55 to a6cb98cb-3154-5193-aa15-eda087e90fea" [ref=f11e267] [cursor=pointer]:
+                        - generic [ref=f11e270]: made_from
+                    - img:
+                      - group "Edge from a6cb98cb-3154-5193-aa15-eda087e90fea to 4e533ee7-666b-4b75-8312-e13522fdd16e" [ref=f11e272] [cursor=pointer]:
+                        - generic [ref=f11e273]: is_part_of
+                    - img:
+                      - group "Edge from a6cb98cb-3154-5193-aa15-eda087e90fea to 5a96af8d-723d-5f40-adef-9020bdd0aa9e" [ref=f11e275] [cursor=pointer]:
+                        - generic [ref=f11e278]: contains
+                    - img:
+                      - group "Edge from 5a96af8d-723d-5f40-adef-9020bdd0aa9e to e99f6e8f-9ef5-52d8-aca2-e7228e0fc3e0" [ref=f11e280] [cursor=pointer]:
+                        - generic [ref=f11e283]: is_a
+                    - img:
+                      - group "Edge from 5a96af8d-723d-5f40-adef-9020bdd0aa9e to ec86b335-5a11-57e1-8441-6ddb0e82ea46" [ref=f11e285] [cursor=pointer]:
+                        - generic [ref=f11e288]: has_dosage
+                    - img:
+                      - group "Edge from ec86b335-5a11-57e1-8441-6ddb0e82ea46 to d5ee3f01-4703-5cdf-b61e-8b2829cb7da5" [ref=f11e290] [cursor=pointer]:
+                        - generic [ref=f11e291]: is_a
+                    - img:
+                      - group "Edge from 5a96af8d-723d-5f40-adef-9020bdd0aa9e to 74311ec9-c6d3-52f0-86ea-5c2a82f7af38" [ref=f11e293] [cursor=pointer]:
+                        - generic [ref=f11e296]: has_frequency
+                    - img:
+                      - group "Edge from 74311ec9-c6d3-52f0-86ea-5c2a82f7af38 to 2776a3b4-fe78-5988-8a59-4d53a3bfc1f1" [ref=f11e298] [cursor=pointer]:
+                        - generic [ref=f11e299]: is_a
+                    - img:
+                      - group "Edge from 5a96af8d-723d-5f40-adef-9020bdd0aa9e to beff2293-3355-56da-b4ae-ce4d22116026" [ref=f11e301] [cursor=pointer]:
+                        - generic [ref=f11e302]: has_duration
+                    - img:
+                      - group "Edge from beff2293-3355-56da-b4ae-ce4d22116026 to 48332387-4aec-5e6a-a549-a6b3d83ffb4b" [ref=f11e304] [cursor=pointer]:
+                        - generic [ref=f11e305]: is_a
+                    - img:
+                      - group "Edge from a6cb98cb-3154-5193-aa15-eda087e90fea to ec86b335-5a11-57e1-8441-6ddb0e82ea46" [ref=f11e307] [cursor=pointer]:
+                        - generic [ref=f11e308]: contains
+                    - img:
+                      - group "Edge from a6cb98cb-3154-5193-aa15-eda087e90fea to 74311ec9-c6d3-52f0-86ea-5c2a82f7af38" [ref=f11e310] [cursor=pointer]:
+                        - generic [ref=f11e311]: contains
+                    - img:
+                      - group "Edge from a6cb98cb-3154-5193-aa15-eda087e90fea to beff2293-3355-56da-b4ae-ce4d22116026" [ref=f11e313] [cursor=pointer]:
+                        - generic [ref=f11e316]: contains
+                  - generic:
+                    - group [ref=f11e318] [cursor=pointer]: TextSummary_c0dcd421-a0be-56be-94e3-aeb54c30b4f3
+                    - group [ref=f11e319] [cursor=pointer]: DocumentChunk_c85974ae-2f65-5764-aed5-a7d763964798
+                    - group [ref=f11e320] [cursor=pointer]: medication
+                    - group [ref=f11e321] [cursor=pointer]: 15 days
+                    - group [ref=f11e322] [cursor=pointer]: TextSummary_11506f73-7862-507e-9f35-7a557c5439b7
+                    - group [ref=f11e323] [cursor=pointer]: DocumentChunk_ed5dabf3-9415-512c-a879-a4c2baba4231
+                    - group [ref=f11e324] [cursor=pointer]: 2 times daily
+                    - group [ref=f11e325] [cursor=pointer]: azithromycin
+                    - group [ref=f11e326] [cursor=pointer]: drug
+                    - group [ref=f11e327] [cursor=pointer]: 4 ml
+                    - group [ref=f11e328] [cursor=pointer]: 1 times daily
+                    - group [ref=f11e329] [cursor=pointer]: 5 days
+                    - group [ref=f11e330] [cursor=pointer]: 10031281-b83a-425e-ad20-638af4eb1423
+                    - group [ref=f11e331] [cursor=pointer]: TextSummary_7428204d-4213-5a2d-9fc2-490ffc56bc55
+                    - group [ref=f11e332] [cursor=pointer]: DocumentChunk_a6cb98cb-3154-5193-aa15-eda087e90fea
+                    - group [ref=f11e333] [cursor=pointer]: amoxicillin
+                    - group [ref=f11e334] [cursor=pointer]: dosage
+                    - group [ref=f11e335] [cursor=pointer]: 7 days
+                    - group [ref=f11e336] [cursor=pointer]: a4975068-a2b6-4ee0-9cc1-f7e87c80a6b8
+                    - group [ref=f11e337] [cursor=pointer]: TextSummary_8cb71cc5-3571-5d9c-acdb-fc4adb4b902d
+                    - group [ref=f11e338] [cursor=pointer]: DocumentChunk_270318a9-4f9c-57a3-adcb-9ef33d5bcf64
+                    - group [ref=f11e339] [cursor=pointer]: cetirizine
+                    - group [ref=f11e340] [cursor=pointer]: 5 ml
+                    - group [ref=f11e341] [cursor=pointer]: dosageamount
+                    - group [ref=f11e342] [cursor=pointer]: frequency
+                    - group [ref=f11e343] [cursor=pointer]: 10 days
+                    - group [ref=f11e344] [cursor=pointer]: 455d3034-1999-4095-90f9-a7fe487e31bf
+                    - group [ref=f11e345] [cursor=pointer]: duration
+                    - group [ref=f11e346] [cursor=pointer]: 1ef14cc6-4d54-45d9-9f67-b93bfac2c64b
+              - generic "Control Panel" [ref=f11e88]:
+                - button "Zoom In" [ref=f11e89] [cursor=pointer]
+                - button "Zoom Out" [ref=f11e92] [cursor=pointer]
+                - button "Fit View" [ref=f11e95] [cursor=pointer]
+              - img "Mini Map" [ref=f11e99]
+              - link "React Flow attribution" [ref=f11e101] [cursor=pointer]:
+                - /url: https://reactflow.dev/attribution
+                - text: React Flow
+          - generic [ref=f11e103]:
+            - article [ref=f11e104]:
+              - paragraph [ref=f11e105]: semantic · record
+              - paragraph [ref=f11e106]: Azithromycin 4 ml, 1 times daily for 5 days.
+              - paragraph [ref=f11e107]: "Source: 5fc04338-8174-4a69-a17b-c449e5691f37 · 2026-09-12T12:12:56.398009+00:00"
+            - article [ref=f11e108]:
+              - paragraph [ref=f11e109]: semantic · record
+              - paragraph [ref=f11e110]: Azithromycin 4 ml, 1 times daily for 5 days.
+              - paragraph [ref=f11e111]: "Source: a4975068-a2b6-4ee0-9cc1-f7e87c80a6b8 · 2026-09-12T12:10:54.566096+00:00"
+            - article [ref=f11e112]:
+              - paragraph [ref=f11e113]: semantic · record
+              - paragraph [ref=f11e114]: Cetirizine 5 ml, 1 times daily for 10 days.
+              - paragraph [ref=f11e115]: "Source: 1ef14cc6-4d54-45d9-9f67-b93bfac2c64b · 2026-09-12T12:10:32.663227+00:00"
+            - article [ref=f11e116]:
+              - paragraph [ref=f11e117]: semantic · record
+              - paragraph [ref=f11e118]: Amoxicillin 5 ml, 2 times daily for 7 days.
+              - paragraph [ref=f11e119]: "Source: 455d3034-1999-4095-90f9-a7fe487e31bf · 2026-09-12T12:09:13.831275+00:00"
+            - article [ref=f11e120]:
+              - paragraph [ref=f11e121]: semantic · record
+              - paragraph [ref=f11e122]: Amoxicillin 5 ml, 2 times daily for 15 days.
+              - paragraph [ref=f11e123]: "Source: 10031281-b83a-425e-ad20-638af4eb1423 · 2026-09-12T10:10:53.859992+00:00"
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f11e129] [cursor=pointer]
+  - alert [ref=f11e347]

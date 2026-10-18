@@ -1,0 +1,1 @@
+-- Demo fixtures are intentionally opt-in and must only be applied to a local Supabase project.

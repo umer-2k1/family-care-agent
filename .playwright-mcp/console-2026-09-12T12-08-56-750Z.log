@@ -1,0 +1,15 @@
+[    2263ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[    2283ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[   38923ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[   38945ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  116315ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  116493ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  223828ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  223867ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  243928ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/api/calendar/google:0
+[  331423ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  331504ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  505475ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  506339ms] [LOG] [Fast Refresh] done in 933ms @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  507155ms] [LOG] [Fast Refresh] done in 933ms @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776
+[  507319ms] [LOG] [Fast Refresh] done in 933ms @ http://localhost:3000/_next/static/chunks/1hkm_next_dist_0h8c2q-._.js:776

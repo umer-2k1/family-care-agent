@@ -1,0 +1,46 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - complementary [ref=f1e3]:
+      - generic [ref=f1e9]:
+        - paragraph [ref=f1e10]: Care Memory
+        - paragraph [ref=f1e11]: Family health, together
+      - navigation "Primary" [ref=f1e12]:
+        - link "Home" [ref=f1e13] [cursor=pointer]:
+          - /url: /
+        - link "Family" [ref=f1e17] [cursor=pointer]:
+          - /url: /family
+        - link "Care" [ref=f1e22] [cursor=pointer]:
+          - /url: /care
+        - link "Memory" [ref=f1e26] [cursor=pointer]:
+          - /url: /memory
+        - link "Ask" [ref=f1e39] [cursor=pointer]:
+          - /url: /ask
+        - link "Settings" [ref=f1e42] [cursor=pointer]:
+          - /url: /settings
+      - generic [ref=f1e46]:
+        - generic [ref=f1e47]:
+          - generic [ref=f1e48]: U
+          - generic [ref=f1e49]:
+            - paragraph [ref=f1e50]: Umer Memon
+            - paragraph [ref=f1e51]: umermemon4648@gmail.com
+        - button "Sign out" [ref=f1e55]
+    - generic [ref=f1e56]:
+      - banner [ref=f1e57]:
+        - paragraph [ref=f1e58]: Saturday, September 12
+        - generic [ref=f1e59]:
+          - link "Open care calendar" [ref=f1e60] [cursor=pointer]:
+            - /url: /care
+          - link "View care notifications" [ref=f1e63] [cursor=pointer]:
+            - /url: /
+      - main [ref=f1e68]:
+        - generic [ref=f1e69]:
+          - generic [ref=f1e70]:
+            - paragraph [ref=f1e71]: Settings
+            - heading "Automation" [level=1] [ref=f1e72]
+          - generic [ref=f1e74]:
+            - generic [ref=f1e75]:
+              - heading "Automatic Google Calendar integration" [level=2] [ref=f1e76]
+              - paragraph [ref=f1e77]: When enabled, complete high-confidence medication courses are confirmed and synchronized after upload. Uncertain or incomplete reports still require review.
+            - switch "Automatic Google Calendar integration" [checked] [ref=f1e78]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=f1e85] [cursor=pointer]
