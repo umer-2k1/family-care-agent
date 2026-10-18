@@ -1,11 +1,5 @@
 {
   "framework": "nextjs",
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm build",
-  "crons": [
-    {
-      "path": "/api/cron/whatsapp",
-      "schedule": "* * * * *"
-    }
-  ]
+  "buildCommand": "pnpm build"
 }

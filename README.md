@@ -48,6 +48,7 @@ Production mode fails closed when Supabase configuration is absent. Application 
 - **Speech:** set `STT_PROVIDER=deepgram` and `DEEPGRAM_API_KEY`. A configured Groq key and `GROQ_WHISPER_MODEL` provide the transcription fallback.
 - **Google Calendar:** use the same Google OAuth client configured for Supabase. Include the application callback in Supabase's redirect allow list. The sign-in flow requests Calendar event access and stores encrypted provider tokens before creating idempotent, user-confirmed follow-up events.
 - **Proactive checks:** set a strong `CRON_SECRET` and call `GET /api/cron/proactive` with `Authorization: Bearer <secret>` from the scheduler. Signed-in users may also call this endpoint through their normal session; other requests are rejected by the application boundary.
+- **WhatsApp dose reminders:** call `GET /api/cron/whatsapp` with `Authorization: Bearer <secret>` from the same external scheduler, **at least once per minute**. Vercel Hobby cron jobs may only run once per day, which would delay reminders queued 15 minutes before and 1 hour after a dose, so this endpoint is intentionally driven outside Vercel Cron. With no scheduler configured, reminders are never dispatched.
 
 After configuration, start the app, sign in with Google, and check `/api/health` before exercising uploads, chat, voice, memory, Calendar, and scheduled checks.
 
